@@ -51,7 +51,7 @@ SavedNewsPerPage = 10
 TopNewsAgeLimit = 3600*24*30
 
 # Footer links
-FooterTwitterLink = false
+FooterTwitterLink = "https://twitter.com/newnewmedianews"
 FooterGoogleGroupLink = false
 
 # API
