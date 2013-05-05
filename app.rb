@@ -1032,8 +1032,7 @@ def application_header
     }
     H.header {
         H.h1 {
-            H.a(:href => "/") {H.entities SiteName}+" "+
-            H.small {Version}
+            H.a(:href => "/") {H.entities SiteName}
         }+navbar+" "+rnavbar
     }
 end
