@@ -486,7 +486,7 @@ get "/editnews/:news_id" do
                 H.inputhidden(:name => "news_id", :value => news['id'])+
                 H.label(:for => "title") {"title"}+
                 H.inputtext(:id => "title", :name => "title", :size => 80,
-                            :value => H.entities(news['title']))+H.br+
+                            :value => news['title'])+H.br+
                 H.label(:for => "url") {"url"}+H.br+
                 H.inputtext(:id => "url", :name => "url", :size => 60,
                             :value => H.entities(news['url']))+H.br+
@@ -1030,10 +1030,11 @@ def application_header
             H.a(:href => "/login") {"login / register"}
         end
     }
+    menu_mobile = H.a(:href => "#", :id => "link-menu-mobile"){"<~>"}
     H.header {
         H.h1 {
             H.a(:href => "/") {H.entities SiteName}
-        }+navbar+" "+rnavbar
+        }+navbar+" "+rnavbar+" "+menu_mobile
     }
 end
 
